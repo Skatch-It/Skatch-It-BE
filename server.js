@@ -31,7 +31,7 @@ app.get('/get', (req, res) => {
     res.json({ message : 'React와 Express가 연결되었습니다!!!!' })
 });
 
-// 닉네임 중복 확인 API
+// 닉네임 중복 확인 API + redis데이터베이스에 저장
 app.post('/api/nickname-check', async(req, res) => {
     const { nickname } = req.body
     
